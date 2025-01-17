@@ -93,7 +93,11 @@ module.exports = (err, req, res, next) => {
     let error = Object.assign({}, err);
 
     // Properly handle specific errors
+<<<<<<< HEAD
     if (error.name === 'CastError') {
+=======
+    if (err.name === 'CastError') {
+>>>>>>> 383bb67 (Initial commit)
       error = handleCastErrorDB(err); // Convert CastError to operational error
     }
     if (error.code === 11000) {
